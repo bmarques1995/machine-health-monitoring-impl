@@ -10,11 +10,10 @@ set(CMAKE_INSTALL_PREFIX ${PROJECT_SOURCE_DIR}/install)
 set(CMAKE_INSTALL_BINDIR ${CMAKE_INSTALL_PREFIX}/bin)
 
 # Build the executable
-add_executable(monitor_exec ${HDW_MONITOR_HDRS} ${HDW_MONITOR_SRCS})
-target_include_directories(monitor_exec PUBLIC "./include" "${PROJECT_SOURCE_DIR}/install/include")
-target_link_directories(monitor_exec PUBLIC "${PROJECT_SOURCE_DIR}/install/lib")
+add_executable(client_monitor ${HDW_MONITOR_HDRS} ${HDW_MONITOR_SRCS})
+target_include_directories(client_monitor PUBLIC "./include" "${PROJECT_SOURCE_DIR}/install/include")
+target_link_directories(client_monitor PUBLIC "${PROJECT_SOURCE_DIR}/install/lib")
 # target_link_libraries(monitor_exec PUBLIC hdw_monitor)
 
 # Install the executable to the specified directory
-install(TARGETS monitor_exec
-        DESTINATION ${CMAKE_INSTALL_BINDIR})
+install(TARGETS client_monitor DESTINATION ${CMAKE_INSTALL_BINDIR})

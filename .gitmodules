@@ -1,0 +1,9 @@
+[submodule "modules/jsoncpp"]
+	path = modules/jsoncpp
+	url = https://github.com/open-source-parsers/jsoncpp.git
+[submodule "modules/mongo_c"]
+	path = modules/mongo_c
+	url = https://github.com/mongodb/mongo-c-driver.git
+[submodule "modules/paho_mqtt_c"]
+	path = modules/paho_mqtt_c
+	url = https://github.com/eclipse/paho.mqtt.c.git
