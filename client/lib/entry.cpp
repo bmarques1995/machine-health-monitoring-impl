@@ -1,7 +1,10 @@
 #include "Hello.hpp"
+#include "CPUMonitor.hpp"
 
 int main()
 {
-    ClientMonitor::Hello::Print();
+    ClientMonitor::Monitor::ReadActiveProcesses();
+    ClientMonitor::Monitor::GetCurrentRAM();
+    ClientMonitor::Monitor::GetNumberOfTCPConnections();
     return 0;
 }

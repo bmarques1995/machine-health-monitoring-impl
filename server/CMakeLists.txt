@@ -10,10 +10,10 @@ set(CMAKE_INSTALL_PREFIX ${PROJECT_SOURCE_DIR}/install)
 set(CMAKE_INSTALL_BINDIR ${CMAKE_INSTALL_PREFIX}/bin)
 
 # Build the executable
-add_executable(client_monitor ${HDW_MONITOR_HDRS} ${HDW_MONITOR_SRCS})
-target_include_directories(client_monitor PUBLIC "./include" "${PROJECT_SOURCE_DIR}/install/include")
-target_link_directories(client_monitor PUBLIC "${PROJECT_SOURCE_DIR}/install/lib")
-target_link_libraries(client_monitor PUBLIC jsoncpp paho-mqtt3a paho-mqtt3c)
+add_executable(server_monitor ${HDW_MONITOR_HDRS} ${HDW_MONITOR_SRCS})
+target_include_directories(server_monitor PUBLIC "./include" "${PROJECT_SOURCE_DIR}/install/include")
+target_link_directories(server_monitor PUBLIC "${PROJECT_SOURCE_DIR}/install/lib")
+target_link_libraries(server_monitor PUBLIC jsoncpp paho-mqtt3a paho-mqtt3c mongoc-static-1.0)
 
 # Install the executable to the specified directory
-install(TARGETS client_monitor DESTINATION ${CMAKE_INSTALL_BINDIR})
+install(TARGETS server_monitor DESTINATION ${CMAKE_INSTALL_BINDIR})
